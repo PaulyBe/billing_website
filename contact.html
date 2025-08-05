@@ -36,51 +36,39 @@
     </header>
 
     <main class="main">
-        <section class="page-header">
+        <section class="contact-header">
             <div class="container">
                 <h1 class="page-title">Contact Us</h1>
-                <p class="page-subtitle">Reach out to us</p>
+                <p class="page-subtitle">Reach out to us for inquiries about our services</p>
             </div>
         </section>
 
-        <section class="content-section">
+        <section>
             <div class="container">
-                <div class="content-grid">
-                    <div class="content-text">
-                        <h2 class="section-title">Our Story</h2>
-                        <p>Founded in 2020, our company has been dedicated to providing exceptional services to businesses of all sizes. We believe in the power of innovation, quality, and customer satisfaction.</p>
-                        <p>Our journey began with a simple mission: to help businesses thrive in an increasingly digital world. Today, we've grown into a trusted partner for companies across various industries.</p>
-                    </div>
-                    <div class="content-image">
-                        <div class="placeholder-image">
-                            <span>Company Image</span>
-                        </div>
-                    </div>
+            
+            <form class="contact-form" id="contactForm">
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
                 </div>
-            </div>
-        </section>
-
-        <section class="values-section">
-            <div class="container">
-                <h2 class="section-title">Our Values</h2>
-                <div class="values-grid">
-                    <div class="value-card">
-                        <h3 class="value-title">Innovation</h3>
-                        <p class="value-description">We constantly seek new and better ways to serve our clients and improve our services.</p>
-                    </div>
-                    <div class="value-card">
-                        <h3 class="value-title">Integrity</h3>
-                        <p class="value-description">We conduct business with honesty, transparency, and ethical practices.</p>
-                    </div>
-                    <div class="value-card">
-                        <h3 class="value-title">Excellence</h3>
-                        <p class="value-description">We strive for perfection in everything we do, never settling for mediocrity.</p>
-                    </div>
-                    <div class="value-card">
-                        <h3 class="value-title">Partnership</h3>
-                        <p class="value-description">We build long-term relationships with our clients, becoming true business partners.</p>
-                    </div>
+                
+                <div class="form-group">
+                    <label for="email">Your Email</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
                 </div>
+                
+                <div class="form-group">
+                    <label for="subject">Service</label>
+                    <input type="text" id="subject" name="subject" placeholder="What service are you interested in?" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="6" placeholder="Your message here..." required></textarea>
+                </div>
+                
+                <button type="submit" class="btn btn-primary">Send Message</button>
+            </form>
             </div>
         </section>
     </main>

@@ -46,13 +46,9 @@ body {
 .nav-brand .brand-link {
     font-size: 1.5rem;
     font-weight: bold;
-    color: #2563eb;
+    color: #1e293b;
     text-decoration: none;
     transition: color 0.3s ease;
-}
-
-.nav-brand .brand-link:hover {
-    color: #1d4ed8;
 }
 
 .nav-toggle {
@@ -83,7 +79,7 @@ body {
 }
 
 .nav-toggle.active .hamburger:nth-child(3) {
-    transform: rotate(45deg) translate(-5px, -6px);
+    transform: rotate(45deg) translate(-6px, -7px);
 }
 
 .nav-menu {
@@ -111,18 +107,37 @@ body {
 }
 
 .nav-link {
+    position: relative;
     font-size: 1.2rem;
     color: #333;
     text-decoration: none;
     padding: 0.5rem 1rem;
     border-radius: 8px;
     transition: all 0.3s ease;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
 }
 
-.nav-link:hover,
 .nav-link.active {
-    color: #2563eb;
-    background-color: #f1f5f9;
+    color: black;
+}
+
+.nav-link::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background: #1e293b;
+    border-radius: 2px;
+    transition: width 0.3s cubic-bezier(.4,0,.2,1);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 70%;
 }
 
 /* Main Content */
@@ -135,8 +150,13 @@ body {
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
+    background-image: url("https://images.pexels.com/photos/40568/medical-appointment-doctor-healthcare-40568.jpeg?_gl=1*ur7t9t*_ga*Mzc2NjUwNTY1LjE3NTM4NzE4Njc.*_ga_8JE65Q40S6*czE3NTQzOTcxMTEkbzMkZzEkdDE3NTQzOTcxNDgkajIzJGwwJGgw");
+    background-size:cover;
+    background-repeat: no-reapeat;
+    background-position: center center;
+    background-color: rgba(0, 0, 0, 0.6);
+    background-blend-mode: overlay;
+    color: #ffffff;
     padding: 4rem 0;
     text-align: center;
 }
@@ -149,7 +169,7 @@ body {
 }
 
 .hero-subtitle {
-    font-size: 1.1rem;
+    font-size: 1.6rem;
     margin-bottom: 2rem;
     opacity: 0.9;
     max-width: 600px;
@@ -167,6 +187,8 @@ body {
 /* Page Header */
 
 .page-header,
+.contact-header,
+.services-header,
 .hero,
 .features,
 .content-section,
@@ -178,22 +200,52 @@ body {
 }
 
 .page-header {
-    background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
-    padding: 1.5rem 0;
+    background-image: url("https://images.pexels.com/photos/164686/pexels-photo-164686.jpeg?_gl=1*1pxbbc8*_ga*Mzc2NjUwNTY1LjE3NTM4NzE4Njc.*_ga_8JE65Q40S6*czE3NTQzOTcxMTEkbzMkZzEkdDE3NTQzOTk0NzUkajUxJGwwJGgw");
+    background-size:cover;
+    background-repeat: no-reapeat;
+    background-position: center center;
+    background-color: rgba(0, 0, 0, 0.6);
+    background-blend-mode: overlay;
+    color: #ffffff;
+    padding: 4rem 0;
     text-align: center;
 }
 
 .page-title {
     font-size: 2.5rem;
-    color: #1e293b;
+    color: #ffffff;
     margin-bottom: 1rem;
 }
 
 .page-subtitle {
-    font-size: 1.1rem;
-    color: #64748b;
+    font-size: 1.6rem;
+    color: #ffffff;
     max-width: 600px;
     margin: 0 auto;
+}
+
+.services-header {
+    background-image: url("https://images.pexels.com/photos/8204354/pexels-photo-8204354.jpeg?_gl=1*oym8qo*_ga*Mzc2NjUwNTY1LjE3NTM4NzE4Njc.*_ga_8JE65Q40S6*czE3NTQzOTcxMTEkbzMkZzEkdDE3NTQ0MDE0NjEkajU5JGwwJGgw");
+    background-size:cover;
+    background-repeat: no-reapeat;
+    background-position: center center;
+    background-color: rgba(0, 0, 0, 0.6);
+    background-blend-mode: overlay;
+    color: #ffffff;
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.contact-header {
+    background-image: url("https://images.pexels.com/photos/821754/pexels-photo-821754.jpeg?_gl=1*kf3exe*_ga*Mzc2NjUwNTY1LjE3NTM4NzE4Njc.*_ga_8JE65Q40S6*czE3NTQzOTcxMTEkbzMkZzEkdDE3NTQ0MDIxMDkkajQ0JGwwJGgw");
+    background-size:cover;
+    background-repeat: no-reapeat;
+    background-position: center center;
+    background-color: rgba(0, 0, 0, 0.6);
+    background-blend-mode: overlay;
+    color: #ffffff;
+    padding: 4rem 0;
+    text-align: center;
 }
 
 /* Buttons */
@@ -210,12 +262,12 @@ body {
 }
 
 .btn-primary {
-    background-color: #2563eb;
+    background-color: #1e293b;
     color: white;
 }
 
 .btn-primary:hover {
-    background-color: #1d4ed8;
+    background-color: #343e4e;
     transform: translateY(-2px);
 }
 
@@ -227,7 +279,7 @@ body {
 
 .btn-secondary:hover {
     background-color: white;
-    color: #2563eb;
+    color: #1e293b;
 }
 
 /* Sections */
@@ -270,9 +322,71 @@ body {
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 300px;
 }
 
-.feature-card:hover {
+.feature-card1,
+.feature-card2,
+.feature-card3,
+.feature-card4,
+.feature-card5 {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-color: rgba(0, 0, 0, 0.85);
+    background-blend-mode: overlay;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 300px;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.feature-card1 {
+    background-image: url("https://images.pexels.com/photos/40568/medical-appointment-doctor-healthcare-40568.jpeg?_gl=1*ur7t9t*_ga*Mzc2NjUwNTY1LjE3NTM4NzE4Njc.*_ga_8JE65Q40S6*czE3NTQzOTcxMTEkbzMkZzEkdDE3NTQzOTcxNDgkajIzJGwwJGgw");
+}
+
+.feature-card2 {
+    background-image: url("https://images.pexels.com/photos/6129689/pexels-photo-6129689.jpeg?_gl=1*py0e65*_ga*Mzc2NjUwNTY1LjE3NTM4NzE4Njc.*_ga_8JE65Q40S6*czE3NTQzOTcxMTEkbzMkZzEkdDE3NTQzOTg3NjgkajUxJGwwJGgw");
+}
+
+.feature-card3 {
+    background-image: url("https://images.pexels.com/photos/4065876/pexels-photo-4065876.jpeg?_gl=1*3rv375*_ga*Mzc2NjUwNTY1LjE3NTM4NzE4Njc.*_ga_8JE65Q40S6*czE3NTQzOTcxMTEkbzMkZzEkdDE3NTQzOTkwOTYkajM1JGwwJGgw");
+}
+
+.feature-card4 {
+    background-image: url("https://images.pexels.com/photos/8296977/pexels-photo-8296977.jpeg?_gl=1*1fayqs5*_ga*Mzc2NjUwNTY1LjE3NTM4NzE4Njc.*_ga_8JE65Q40S6*czE3NTQzOTcxMTEkbzMkZzEkdDE3NTQzOTkxMzUkajU2JGwwJGgw");
+}
+
+.feature-card5 {
+    background-image: url("https://images.pexels.com/photos/7682340/pexels-photo-7682340.jpeg?_gl=1*nrcd44*_ga*Mzc2NjUwNTY1LjE3NTM4NzE4Njc.*_ga_8JE65Q40S6*czE3NTQzOTcxMTEkbzMkZzEkdDE3NTQzOTkxODkkajIkbDAkaDA.");
+}
+
+.feature-card1 p,
+.feature-card1 h3,
+.feature-card2 p,
+.feature-card2 h3,
+.feature-card3 p,
+.feature-card3 h3,
+.feature-card4 p,
+.feature-card4 h3,
+.feature-card5 p,
+.feature-card5 h3{
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+}
+
+.feature-card1:hover,
+.feature-card2:hover,
+.feature-card3:hover,
+.feature-card4:hover,
+.feature-card5:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
 }
@@ -280,6 +394,15 @@ body {
 .feature-icon {
     font-size: 3rem;
     margin-bottom: 1rem;
+}
+
+.feature-icon1 {
+    background-image: url("https://images.pexels.com/photos/40568/medical-appointment-doctor-healthcare-40568.jpeg?_gl=1*ur7t9t*_ga*Mzc2NjUwNTY1LjE3NTM4NzE4Njc.*_ga_8JE65Q40S6*czE3NTQzOTcxMTEkbzMkZzEkdDE3NTQzOTcxNDgkajIzJGwwJGgw");
+    background-size:cover;
+    background-repeat: no-reapeat;
+    background-position: center center;
+    background-color: rgba(0, 0, 0, 0.6);
+    background-blend-mode: overlay;
 }
 
 .feature-title {
@@ -313,8 +436,6 @@ body {
 }
 
 .placeholder-image {
-    background-color: #f1f5f9;
-    border: 2px dashed #cbd5e1;
     border-radius: 12px;
     height: 300px;
     display: flex;
@@ -322,6 +443,34 @@ body {
     justify-content: center;
     color: #64748b;
     font-weight: 500;
+    background-image: url("https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?_gl=1*bh3zfs*_ga*Mzc2NjUwNTY1LjE3NTM4NzE4Njc.*_ga_8JE65Q40S6*czE3NTQzOTcxMTEkbzMkZzEkdDE3NTQ0MDEwNTQkajU0JGwwJGgw");
+    background-size:cover;
+    background-repeat: no-reapeat;
+    background-position: center center;
+    background-color: rgba(0, 0, 0, 0.2);
+    background-blend-mode: overlay;
+    color: #ffffff;
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.placeholder-image2 {
+    border-radius: 12px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #64748b;
+    font-weight: 500;
+    background-image: url("https://images.pexels.com/photos/3833052/pexels-photo-3833052.jpeg?_gl=1*r8shxc*_ga*Mzc2NjUwNTY1LjE3NTM4NzE4Njc.*_ga_8JE65Q40S6*czE3NTQzOTcxMTEkbzMkZzEkdDE3NTQ0MDExNTMkajIzJGwwJGgw");
+    background-size:cover;
+    background-repeat: no-reapeat;
+    background-position: center center;
+    background-color: rgba(0, 0, 0, 0.2);
+    background-blend-mode: overlay;
+    color: #ffffff;
+    padding: 4rem 0;
+    text-align: center;
 }
 
 /* Values Grid */
@@ -335,7 +484,7 @@ body {
     background: white;
     padding: 2rem;
     border-radius: 12px;
-    border-left: 4px solid #2563eb;
+    border-left: 4px solid #1e293b;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -421,8 +570,14 @@ body {
 
 /* CTA Section */
 .cta-section {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
+    background-image: url("https://images.pexels.com/photos/374074/pexels-photo-374074.jpeg?_gl=1*qcpi92*_ga*Mzc2NjUwNTY1LjE3NTM4NzE4Njc.*_ga_8JE65Q40S6*czE3NTQzOTcxMTEkbzMkZzEkdDE3NTQ0MDE4MDQkajQwJGwwJGgw");
+    background-size:cover;
+    background-repeat: no-reapeat;
+    background-position: center center;
+    background-color: rgba(0, 0, 0, 0.90);
+    background-blend-mode: overlay;
+    color: #ffffff;
+    padding: 4rem 0;
     text-align: center;
 }
 
@@ -434,6 +589,49 @@ body {
     font-size: 1.1rem;
     margin-bottom: 2rem;
     opacity: 0.9;
+}
+
+/* Contact Form Styles */
+.contact-form {
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 12px;
+    max-width: 600px;
+    margin: 2rem auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.contact-form label {
+    font-weight: 500;
+    color: #1e293b;
+    margin-bottom: 0.25rem;
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form textarea {
+    font-family: inherit;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    border: 1.5px solid #cbd5e1;
+    font-size: 1rem;
+    background: #fff;
+    color: #333;
+    transition: border-color 0.2s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #2563eb;
+    outline: none;
 }
 
 /* Footer */
@@ -516,6 +714,10 @@ body {
 
     .services-grid {
         grid-template-columns: repeat(1, 1fr);
+        display: grid;
+        margin-left: 10px;
+        align-items: center;
+        justify-content: center;
     }
 }
 
