@@ -333,7 +333,7 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-    background-color: rgba(0, 0, 0, 0.85);
+    background-color: rgba(0, 0, 0, 0.8);
     background-blend-mode: overlay;
     padding: 2rem;
     border-radius: 12px;
